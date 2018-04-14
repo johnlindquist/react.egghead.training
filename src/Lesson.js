@@ -2,13 +2,11 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 import Editor from "./Editor"
 
-export default props => {
-  const code = require(`./lessons/${props.name}.js`)
-  const md = require(`./lessons/${props.name}.md`)
-
+export default ({ markdown, code }) => {
+  console.log({ markdown, code })
   return (
-    <div>
-      <ReactMarkdown source={md} />
+    <div className="lesson">
+      <ReactMarkdown source={markdown} />
       <Editor code={code} />
     </div>
   )

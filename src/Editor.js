@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 
 import styled from "styled-components"
@@ -11,7 +11,7 @@ export const red = "#ff5555"
 
 export const blue = polished.lighten(0.1, "#6272a4")
 export const lightGrey = polished.darken(0.05, "#282a36")
-const scope = { styled }
+const scope = { styled, Component }
 
 const LiveWrapper = styled.div`
   display: flex;
@@ -49,7 +49,6 @@ const StyledPreview = styled(LivePreview)`
 
   overflow: hidden;
   flex: 1;
-  font-family: "Avenir", sans-serif;
   border: 2px solid black;
 
   @media (max-width: 600px) {
@@ -68,19 +67,6 @@ const StyledError = styled(LiveError)`
     padding: 0;
     margin: 0;
     outline: 0;
-  }
-`
-
-const Example = styled.div`
-  padding: ${polished.rem(20)};
-  margin: ${polished.rem(20)};
-  outline: 10px solid black;
-  width: 720px;
-  @media (max-width: 600px) {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    min-width: 100vw;
   }
 `
 

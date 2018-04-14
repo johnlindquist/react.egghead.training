@@ -2,28 +2,52 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono);
 
+pre {
+  background-color: whitesmoke;
+  padding: 1rem;
+}
+
 code {
+  background-color: whitesmoke;
   color: rgb(176, 12, 12);
   font-weight: bold;
+}
+
+.react-live-preview {
+  font-family: sans-serif;
 }
 
 code,
 .prism-code {
   font-family: "IBM Plex Mono", monospace;
 }
-
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    min-width: 100vw;
+  }
+  .lesson > div:nth-child(1) {
+    padding: 1rem;
+  }
+}
 body {
   font-size: 17px;
   font-family: "Lato", Helvetica, "Helvetica Neuve", Arial, Tahoma, sans-serif;
   color: #333;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.lesson {
+  max-width: 720px;
+}
+
+.lesson > div:nth-child(1) h1,
+.lesson > div:nth-child(1) h2,
+.lesson > div:nth-child(1) h3,
+.lesson > div:nth-child(1) h4,
+.lesson > div:nth-child(1) h5,
+.lesson > div:nth-child(1) h6 {
   padding-top: 3rem;
   font-family: "Arvo", Helvetica, "Helvetica Neuve", Arial, Tahoma, sans-serif;
   color: #222;
@@ -260,24 +284,6 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 480px) {
-  body {
-    padding: 15px;
-  }
-
-  header ul {
-    display: none;
-  }
-}
-
-@media print {
-  body {
-    padding: 0.4in;
-    font-size: 12pt;
-    color: #444;
-  }
-}
-
 #wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -369,31 +375,4 @@ h4:nth-child(1),
 h5:nth-child(1),
 h6:nth-child(1) {
   margin-top: 0;
-}
-
-body {
-  padding: 1em;
-}
-
-#wrapper {
-  padding: 1em;
-}
-
-@media (min-width: 43.75em) {
-  body {
-    padding: 2em;
-  }
-  #wrapper {
-    padding: 2em;
-  }
-}
-
-@media (min-width: 62em) {
-  body {
-    padding: 3em;
-  }
-  #wrapper {
-    max-width: 740px;
-    padding: 3em;
-  }
 }
